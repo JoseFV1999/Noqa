@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143980737522",
+    "project_id": "noqa-fcc40",
+    "storage_bucket": "noqa-fcc40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143980737522:android:a340c4ab41b8141a5a316b",
+        "android_client_info": {
+          "package_name": "com.miempresa.noqa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143980737522-u43ijrc6gih5vntrp715hckvtjue6tel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-HX_zw6B26npw_SK0X75ssX1OkarjrjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143980737522-u43ijrc6gih5vntrp715hckvtjue6tel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

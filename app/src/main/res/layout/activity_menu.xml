@@ -5,7 +5,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3330"
     tools:context=".Menu">
+
+    <ImageView
+        android:id="@+id/imageSEIF"
+        android:layout_width="284dp"
+        android:transitionName="trans_log"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/icono_noqa_sin_fondo"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -20,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserratregular"
         android:text="Gracias por utilizar Noqa Purini"
         android:textSize="15dp"
         android:textAlignment="center"/>
@@ -31,25 +44,28 @@
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal">
 
+
             <Button
                 android:id="@+id/btnMapa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:textSize="30dp"
+                android:textAlignment="center"
+                android:textSize="24dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="#FF0000"
-                android:text="Recorrido"
+                android:background="@drawable/rounded_button"
+                android:text="Iniciar recorrido"
+                android:drawableLeft="@drawable/icon_recorrido"
                 android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/btnFavoritos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:textSize="30dp"
+                android:textAlignment="center"
+                android:textSize="24dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="#FF0000"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/icono_favorite"
                 android:text="Favoritos"
                 android:textAllCaps="false"/>
 

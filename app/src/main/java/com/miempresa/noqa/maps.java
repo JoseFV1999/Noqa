@@ -28,6 +28,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
@@ -108,6 +109,7 @@ public class maps extends Fragment implements OnMapReadyCallback {
                     LatLng miPosicion = new LatLng(latitudOrigen, longitudOrigen);
 
                     map.addMarker(new MarkerOptions().position(miPosicion).title("USTED ESTA AQUI"));
+
                     CameraPosition cameraPosition = new CameraPosition.Builder()
                             .target(new LatLng(latitudOrigen, longitudOrigen))
                             .zoom(12)
@@ -116,7 +118,7 @@ public class maps extends Fragment implements OnMapReadyCallback {
                     map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
                     String urlRestaurants = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
-                            +latitudOrigen + "," +longitudOrigen
+                            +latitudOrigen+ "," +longitudOrigen
                             +"&radius=1000" +
                             "&type=restaurant" +
                             "&key=AIzaSyC7U2vYoCP2V2YDncF5PiQnjWaBE0iAi_c";
@@ -145,6 +147,7 @@ public class maps extends Fragment implements OnMapReadyCallback {
     }
 
     private void Marcar_sitios(JSONObject jso) {
+
         JSONArray jResults;
         JSONObject jGeometry;
         JSONObject jLocation;
@@ -169,7 +172,7 @@ public class maps extends Fragment implements OnMapReadyCallback {
                     ).title(jName)
                 );
             }
-            Toast.makeText(getActivity(), "Lat,Lng: "+ longitud,Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Lat,Lng: "+ longitud + "," + latitud,Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
             e.printStackTrace();
         }
